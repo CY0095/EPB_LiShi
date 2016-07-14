@@ -223,14 +223,10 @@
 			children = (
 				C231C63F1D3636AB009BB26B /* BaseViewController.h */,
 				C231C6401D3636AB009BB26B /* BaseViewController.m */,
-				C231C6421D3636CA009BB26B /* CommunityViewController.h */,
-				C231C6431D3636CA009BB26B /* CommunityViewController.m */,
-				C231C6451D363701009BB26B /* ActivityViewController.h */,
-				C231C6461D363701009BB26B /* ActivityViewController.m */,
-				C231C6481D36378F009BB26B /* EquipViewController.h */,
-				C231C6491D36378F009BB26B /* EquipViewController.m */,
-				C231C6901D3642BE009BB26B /* MyViewController.h */,
-				C231C6911D3642BE009BB26B /* MyViewController.m */,
+				D60EC7531D3727050079304D /* 社区 */,
+				D60EC7521D3727000079304D /* 活动 */,
+				D60EC7511D3726FB0079304D /* 装备 */,
+				D60EC7501D3726F10079304D /* 我的 */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -316,6 +312,42 @@
 				C231C6A91D365738009BB26B /* My_Select.png */,
 			);
 			path = LSTabBar_Image;
+			sourceTree = "<group>";
+		};
+		D60EC7501D3726F10079304D /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				C231C6901D3642BE009BB26B /* MyViewController.h */,
+				C231C6911D3642BE009BB26B /* MyViewController.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		D60EC7511D3726FB0079304D /* 装备 */ = {
+			isa = PBXGroup;
+			children = (
+				C231C6481D36378F009BB26B /* EquipViewController.h */,
+				C231C6491D36378F009BB26B /* EquipViewController.m */,
+			);
+			name = "装备";
+			sourceTree = "<group>";
+		};
+		D60EC7521D3727000079304D /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				C231C6451D363701009BB26B /* ActivityViewController.h */,
+				C231C6461D363701009BB26B /* ActivityViewController.m */,
+			);
+			name = "活动";
+			sourceTree = "<group>";
+		};
+		D60EC7531D3727050079304D /* 社区 */ = {
+			isa = PBXGroup;
+			children = (
+				C231C6421D3636CA009BB26B /* CommunityViewController.h */,
+				C231C6431D3636CA009BB26B /* CommunityViewController.m */,
+			);
+			name = "社区";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
