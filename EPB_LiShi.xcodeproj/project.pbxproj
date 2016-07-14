@@ -234,6 +234,7 @@
 		C231C6861D363FB6009BB26B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D60EC7541D3728B90079304D /* cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,6 +349,45 @@
 				C231C6431D3636CA009BB26B /* CommunityViewController.m */,
 			);
 			name = "社区";
+			sourceTree = "<group>";
+		};
+		D60EC7541D3728B90079304D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				D60EC7581D3728F30079304D /* 社区cell */,
+				D60EC7571D3728EC0079304D /* 活动cell */,
+				D60EC7561D3728E50079304D /* 装备cell */,
+				D60EC7551D3728C00079304D /* 我的cell */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		D60EC7551D3728C00079304D /* 我的cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "我的cell";
+			sourceTree = "<group>";
+		};
+		D60EC7561D3728E50079304D /* 装备cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "装备cell";
+			sourceTree = "<group>";
+		};
+		D60EC7571D3728EC0079304D /* 活动cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "活动cell";
+			sourceTree = "<group>";
+		};
+		D60EC7581D3728F30079304D /* 社区cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "社区cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
