@@ -8,7 +8,7 @@
         <!--Root View Controller-->
         <scene sceneID="gC0-En-8r3">
             <objects>
-                <tabBarController id="NyQ-VP-qqN" customClass="RootViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RootViewController" id="NyQ-VP-qqN" customClass="RootViewController" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="j9v-3X-Kgc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RootViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,9 +16,51 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    RootViewController *rootVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"RootViewController"];
+    [self.window setRootViewController:rootVC];
+    // 初始化欢迎界面背景视图
+    self.splashView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIImageView *backImg = [[UIImageView alloc] initWithFrame:self.splashView.bounds];
+    backImg.image = [UIImage imageNamed:@"welcome.jpg"];
+    
+    UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 260, 100)];
+    textLabel.text = @"WELCOME LISHI";
+    textLabel.textColor = [UIColor purpleColor];
+    textLabel.textAlignment = NSTextAlignmentCenter;
+    textLabel.font = [UIFont systemFontOfSize:35];
+    textLabel.center = CGPointMake(self.splashView.center.x, self.splashView.center.y + 160);
+    // 添加图片
+    [self.splashView addSubview:backImg];
+    // 添加字体
+    [self.splashView addSubview:textLabel];
+    [self.window addSubview:self.splashView];
+    [self.window bringSubviewToFront:self.splashView];
+    [self performSelector:@selector(showImg) withObject:nil afterDelay:1];
+    
+    
+    
     return YES;
 }
+-(void)showImg{
+    [UIView animateKeyframesWithDuration:3 delay:0 options:(UIViewKeyframeAnimationOptionCalculationModeCubicPaced) animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1 animations:^{
+            self.splashView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        }];
+        //        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5
+        //                                      animations:^{
+        //
+        //                                          self.splashView.transform = CGAffineTransformMakeScale(1, 1);
+        //                                      }];
+    } completion:^(BOOL finished) {
+        [NSThread sleepForTimeInterval:2];
+        [self.splashView removeFromSuperview];
+    }];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
